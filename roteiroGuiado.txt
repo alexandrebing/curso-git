@@ -1,0 +1,29 @@
+Criando um controle de versão na pasta local
+
+  git init
+
+Isso cria um arquivo oculto .git que é responsável por gerenciar as alterações nessa pasta.
+
+  git status
+
+Mostra os arquivos naquela pasta que não estão inclusos no controle de versão.
+
+Para incluirmos um arquivo no git, devemos adicionar ele, com o comandos
+
+  git add arquivo.txt
+
+Agora, ele está sendo monitorado pelo git. Arquivos que estão no controle de versão, mas sofreram alteração sem commit, ficam em verde, os outros arquivos que não tem controle estão em vermelho.
+
+  git commit -m "mensagem de commit"
+
+Esse comando adiciona os arquivos que estavam no Stage (depois de dar o Add) e inclui comentário sobre o commit. Será possivel no futuro ver alterações das mudanças a cada commit.
+
+Posso vincular esse repositório a um repositório remoto. Faço isso com o comando:
+
+  git remote add origin master https://...
+
+Onde o link deve ser de um serviço como o github ou similar. Origin é o nome do nosso repositório local e master a branch principal do remoto. Pode me exigir usuário e senha.
+
+Para eu enviar os commits feitos localmente para o repositório remoto, uso o comando
+
+  git push origin master
