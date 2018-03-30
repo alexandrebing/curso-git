@@ -1,0 +1,36 @@
+git init - inicializa o controle de versionamento dentro da pasta.
+
+git ls-files - mostra os arquivos que estão sendo controlados.
+
+git status - mostra o estado dos arquivos no projeto.
+
+git add arquivo- adiciona arquivo ao controle de versão (git).
+  git add arquivo1 arquivo2 ...- adiciona mais de um arquivo
+  git add caminho/diretorio - adiciona o diretório no caminho
+  git add . - adiciona todos os arquivos dentro do diretório atual
+
+git commit - gravar alterações dos arquivos adicionados no repositório.
+  git commit -m "mensagem" - grava as alterações com um comentário, sempre é recomendado.
+  git commit -a - grava todos os arquivos modificados ou removidos, mas não inclui novos arquivos no repositório
+  git commit -a -m - faz a junção dos dois comandos acima.
+
+git log - vejo o histórico de commits.
+
+git whatchanged - vejo um histórico mais detalhado
+  git whatchanged -p - mostra também as linhas alteradas.
+
+git remote - mostra repositórios remotos vinculados aos arquivos.
+  git remote add origin https://... -   comando para adicionar o repositório remoto contendo o repositório de origme
+  git remote -v - mostra repositórios remotos e urls
+  git remote rename origin origin2 - renomeia o repositório
+  git remote remove origin - remove o repositório.
+
+git push origin master - push do repositório para o repositório remoto.
+  git push -u origin master - atrela a git local à remota
+  git push - se feito o comando anterior, vai fazer como se fosse o primeiro push.
+
+git clone https://... - baixa o repositório remoto para a maquina local
+
+git config user.nome "nome" - muda informação de nome do usuario no repositório.
+  git config --global user.nome "nome" - muda informação de nome do usuário no sistema.
+  git config user.mail "email" - muda o email do usuário.
