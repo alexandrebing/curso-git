@@ -4,6 +4,12 @@ git ls-files - mostra os arquivos que estão sendo controlados.
 
 git status - mostra o estado dos arquivos no projeto.
 
+git branch - mostra as branches do projeto.
+  git branch nome - cria uma branch com o nome desejado.
+
+git checkout nome - troca para a branch com determinado nome.
+  git checkout -b nome - cria uma branch e troca para ela.
+
 git add arquivo- adiciona arquivo ao controle de versão (git).
   git add arquivo1 arquivo2 ...- adiciona mais de um arquivo
   git add caminho/diretorio - adiciona o diretório no caminho
@@ -28,6 +34,9 @@ git remote - mostra repositórios remotos vinculados aos arquivos.
 git push origin master - push do repositório para o repositório remoto.
   git push -u origin master - atrela a git local à remota
   git push - se feito o comando anterior, vai fazer como se fosse o primeiro push.
+
+git pull - traz os documentos do repositório remoto
+  git pull remote local - traz os documentos da branch especifica do repositório remoto para uma branch específica local
 
 git clone https://... - baixa o repositório remoto para a maquina local
 
