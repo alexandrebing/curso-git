@@ -1,3 +1,5 @@
+INICIO
+
 Criando um controle de versão na pasta local
 
   git init
@@ -18,6 +20,9 @@ Agora, ele está sendo monitorado pelo git. Arquivos que estão no controle de v
 
 Esse comando adiciona os arquivos que estavam no Stage (depois de dar o Add) e inclui comentário sobre o commit. Será possivel no futuro ver alterações das mudanças a cada commit.
 
+
+VINCULANDO A UM REPOSITÓRIO REMOTO
+
 Posso vincular esse repositório a um repositório remoto. Faço isso com o comando:
 
   git remote add origin master https://...
@@ -27,3 +32,41 @@ Onde o link deve ser de um serviço como o github ou similar. Origin é o nome d
 Para eu enviar os commits feitos localmente para o repositório remoto, uso o comando
 
   git push origin master
+
+O comando
+
+  git push -u origin master
+
+Já vincula o repositório local ao repositório remoto.
+
+Isso envia todas as alterações feiras localmente para o repositório remoto.
+
+TRABALHANDO COM BRANCHES
+
+Trabalhamos com branches quando queremos alterar alguma coisa sem comprometer o sistema como um todo.
+
+Fazemos branches para desenvolver separadamente partes diferentes do projeto, ou uma mesma parte que está sendo desenvolvida por mais de uma pessoa. E não queremos que um interfira com o outro.
+
+Podemos ver as branches do nosso projeto com o comando:
+
+  git branch
+
+E podemos criar uma nova branch com o nome que quisermos com o comando:
+
+  git branch novaBranch
+
+Para alterarmos a branch na qual estamos trabalhando, alteramos com o comandos
+
+  git checkout novaBranch
+
+Criamos e alteramos os arquivos que queremos, fazemos o add e commit normalmente, e enviamos para uma nova branch remota com o comando:
+
+  git push -u origin novaBranch
+
+Lembrando que o -u já vai vincular a branch local com a remota.
+
+Se houver uma branch remota que não temos no repositório local, podemos criar esse repositório e vincular à branch com o comando:
+
+  git branch -t nomeBranch origin/nomeBranch
+
+Novo texto.
